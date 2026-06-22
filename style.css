@@ -1,0 +1,60 @@
+body{
+    background-color: black;
+    overflow-x: hidden;
+    color: white;
+}
+li{
+    transition: all 1s;
+}
+li:hover{
+    color: #cbad8d;
+}
+.txt{
+    font-family: Arial; 
+       
+}
+.logo{
+    font-family: Arial;
+ line-height: 55px;
+}
+.img{
+    border-radius: 50%;
+}
+.btn{
+    background-color: transparent;
+    border:2px solid #cbad8d;
+    color: #cbad8d;
+    transition: all 0.5s;
+    border-radius: 35px
+}
+.btn:hover{
+      background-color: #cbad8d;
+    border:none;
+    cursor: pointer;
+    transform: scale(1.1);
+    color: black;
+    font-weight: bold;
+}
+ .img2{
+   width: 400px;
+   border-radius: 50%;
+   position: relative;
+   left:20px;
+   border: 10px double #cbad8d;
+ }
+ .connections{
+    font-size: 60px;
+    color: #cbad8d;
+    font-family: 'Dancing Script';
+    font-weight: bold;
+ }
+ .box{
+  transition: all 2s ease;
+  padding: 50px 20px;
+  border-radius: 20px;
+ }
+ .box:hover{
+    transform: translateY(-15px);
+    box-shadow: 5px 10px 20px #cbad8d;
+
+ }
