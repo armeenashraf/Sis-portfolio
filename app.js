@@ -1,7 +1,8 @@
+
 const texts = [
-  " Chef",
-  " Graphic Designer",
-  " Virtual Assistant (Ecom)"
+  "Chef",
+  "Graphic Designer",
+  "Virtual Assistant (Ecom)"
 ];
 
 let textIndex = 0;
@@ -11,11 +12,13 @@ let isDeleting = false;
 const typingElement = document.getElementById("changing-text");
 
 function typeEffect() {
+  if (!typingElement) return;
+
   const currentText = texts[textIndex];
 
   if (!isDeleting) {
-    typingElement.textContent = currentText.slice(0, charIndex + 1);
     charIndex++;
+    typingElement.textContent = currentText.slice(0, charIndex);
 
     if (charIndex === currentText.length) {
       isDeleting = true;
@@ -23,8 +26,8 @@ function typeEffect() {
       return;
     }
   } else {
-    typingElement.textContent = currentText.slice(0, charIndex - 1);
     charIndex--;
+    typingElement.textContent = currentText.slice(0, charIndex);
 
     if (charIndex === 0) {
       isDeleting = false;
@@ -34,6 +37,9 @@ function typeEffect() {
 
   setTimeout(typeEffect, isDeleting ? 50 : 100);
 }
+
+typeEffect();
+
 
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
